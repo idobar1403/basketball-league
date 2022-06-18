@@ -15,8 +15,6 @@ namespace league
         away_points += (int)round(this->away->talent * (double)talent_points);
         this->home->update_points(home_points, away_points);
         this->away->update_points(away_points, home_points);
-        std::cout<<this->home->name + " scored: "<<home_points<<std::endl; 
-        std::cout<<this->away->name + " scored: "<<away_points<<std::endl;
     }
     void Game::update_teams(Team &win, Team &loss)
     {
@@ -25,17 +23,17 @@ namespace league
     }
     int Game::generate_points_home()
     {
-        std::random_device rd{};
-        std::mt19937 gen{rd()};
-        std::normal_distribution<> random_points(min_home, max_points);
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> random_points(min_home, max_points);
         return random_points(gen);
     }
 
     int Game::generate_points_away()
     {
-        std::random_device rd{};
-        std::mt19937 gen{rd()};
-        std::normal_distribution<> random_points(min_away, max_points);
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> random_points(min_away, max_points);
         return random_points(gen);
     }
 }

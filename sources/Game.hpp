@@ -8,7 +8,7 @@ namespace league{
     constexpr int max_points = 100;
     constexpr int min_away = 50;
     constexpr int min_home = 55;
-    constexpr int talent_points = 10;
+    constexpr double talent_points = 10;
     class Team;
     class Game{
         Team *home;

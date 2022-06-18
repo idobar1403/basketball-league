@@ -13,9 +13,9 @@ namespace league
     {
     public:
         std::vector<std::string> teams_names;
-        std::vector<std::vector<Game>> games;
+        std::vector<std::vector<Game*>>games;
         Schedule(League &leag, std::vector<std::string>);
-        void buildGames(League leag);
+        void buildGames(League *leag);
         void playLeague();
 
     };

@@ -13,6 +13,12 @@ namespace league
         std::vector<Team *>*teams;
         std::vector<std::string> names;
         void buildSchedule();
+        void most_positive_points();
+        void most_negative_points();
+        void leas_points_against();
+        void leas_points_for();
+        void most_wins();
+        void most_loss();
         League()
         {
             this->teams = new std::vector<Team*>[20];

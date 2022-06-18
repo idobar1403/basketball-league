@@ -57,6 +57,12 @@ namespace league
 
     void Team::update_points(int p_for, int p_against)
     {
+        if(p_for>p_against){
+            won();
+        }
+        else{
+            lost();
+        }
         this->points_for += p_for;
         this->points_against += p_against;
     }
